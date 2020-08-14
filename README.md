@@ -1,3 +1,35 @@
+# terraform-aws-account-identity
+
+This terraform module creates identity roles on AWS
+
+This modules creates the following resources:
+ - Identity and Access Management (IAM) roles and policies
+ - Identity roles created:
+    - Admin Access
+      - Policy attached: "arn:aws:iam::aws:policy/AdministratorAccess"
+    - Data Scientist
+      - Policy attached: "arn:aws:iam::aws:policy/job-function/DataScientist"
+    - Database Admin
+      - Policy attached: "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator"
+    - Network Admin
+      - Policy attached: ""arn:aws:iam::aws:policy/job-function/NetworkAdministrator"
+    - Power User Access
+      - Policy attached: "arn:aws:iam::aws:policy/PowerUserAccess"
+    - Security Audit
+      - Policy attached: "arn:aws:iam::aws:policy/SecurityAudit"
+    - Support User
+      - Policy attached: "arn:aws:iam::aws:policy/job-function/SupportUser""
+    - System Admin
+      - Policy attached: "arn:aws:iam::aws:policy/job-function/SystemAdministrator"
+    - View Only Access
+      - Policy attached: "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess"
+
+  In addition you have the option to:
+
+   - Set or not a IAM account alias
+   - Set Maximum CLI/API session duration
+      - The default value is 43200
+
 # Usage
 <!--- BEGIN_TF_DOCS --->
 
