@@ -1,5 +1,8 @@
 # terraform-aws-account-identity
 
+[![Lint Status](https://github.com/DNXLabs/terraform-aws-account-identity/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-account-identity/actions)
+[![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-account-identity)](https://github.com/DNXLabs/terraform-aws-account-identity/blob/master/LICENSE)
+
 This terraform module creates identity roles on AWS
 
 This modules creates the following resources:
@@ -30,7 +33,6 @@ This modules creates the following resources:
    - Set Maximum CLI/API session duration
       - The default value is 43200
 
-# Usage
 <!--- BEGIN_TF_DOCS --->
 
 ## Requirements
@@ -74,3 +76,11 @@ This modules creates the following resources:
 | iam\_role\_view\_only\_arn | ViewOnlyAccess IAM role ARN |
 
 <!--- END_TF_DOCS --->
+
+## Authors
+
+Module managed by [DNX Solutions](https://github.com/DNXLabs).
+
+## License
+
+Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/terraform-aws-account-identity/blob/master/LICENSE) for full details.
