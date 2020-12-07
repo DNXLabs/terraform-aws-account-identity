@@ -3,6 +3,11 @@ output "iam_role_admin_arn" {
   description = "AdministratorAccess IAM role ARN"
 }
 
+output "iam_role_billing_arn" {
+  value       = aws_iam_role.billing.arn
+  description = "BillingAccess IAM role ARN"
+}
+
 output "iam_role_data_scientist_arn" {
   value       = aws_iam_role.data_scientist.arn
   description = "DataScientist IAM role ARN"
