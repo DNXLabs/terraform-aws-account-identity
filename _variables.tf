@@ -35,6 +35,11 @@ variable "saml_provider_name" {
   description = "SAML Provider name to trust the roles created"
 }
 
+variable "enable_iam_password_policy" {
+  description = "Enable IAM passoword policy"
+  default     = false
+}
+
 locals {
   saml_provider_arn = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:saml-provider/${var.saml_provider_name}"
 }
