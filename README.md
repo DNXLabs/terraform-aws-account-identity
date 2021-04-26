@@ -52,6 +52,8 @@ This modules creates the following resources:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | account\_name | Account name (slug) | `any` | n/a | yes |
+| create\_default\_roles | Create default roles in the account | `bool` | `true` | no |
+| enable\_iam\_password\_policy | Enable IAM passoword policy | `bool` | `false` | no |
 | extra\_roles | A list of extra roles to create in this account | `list` | `[]` | no |
 | extra\_roles\_policy | A map of { <role\_name> = <json policy> } to create policies to extra roles in this account (role must be declared at extra\_roles first) | `map` | `{}` | no |
 | extra\_roles\_policy\_arn | A map of { <role\_name> = <policy arn> } to attach policies to extra roles in this account (role must be declared at extra\_roles first) | `map` | `{}` | no |
