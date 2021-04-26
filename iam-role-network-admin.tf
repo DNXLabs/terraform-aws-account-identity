@@ -6,7 +6,7 @@ resource "aws_iam_role" "network_admin" {
 }
 
 resource "aws_iam_role_policy_attachment" "network_admin" {
-  count                = var.create_default_roles ? 1 : 0
+  count      = var.create_default_roles ? 1 : 0
   role       = aws_iam_role.network_admin[0].name
   policy_arn = "arn:aws:iam::aws:policy/job-function/NetworkAdministrator"
 }
