@@ -4,17 +4,17 @@ output "iam_role_admin_arn" {
 }
 
 output "iam_role_data_scientist_arn" {
-  value       = aws_iam_role.data_scientist.arn
+  value       = aws_iam_role.data_scientist.*.arn
   description = "DataScientist IAM role ARN"
 }
 
 output "iam_role_database_admin_arn" {
-  value       = aws_iam_role.database_admin.arn
+  value       = aws_iam_role.database_admin.*.arn
   description = "DatabaseAdministrator IAM role ARN"
 }
 
 output "iam_role_network_admin_arn" {
-  value       = aws_iam_role.network_admin.arn
+  value       = aws_iam_role.network_admin.*.arn
   description = "NetworkAdministrator IAM role ARN"
 }
 
