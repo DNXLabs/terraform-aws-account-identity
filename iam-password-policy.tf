@@ -7,5 +7,5 @@ resource "aws_iam_account_password_policy" "prod_cdr_password_policy" {
   require_symbols                = true
   allow_users_to_change_password = true
   max_password_age               = 90
-  password_reuse_prevention      = 5
+  password_reuse_prevention      = 12
 }
