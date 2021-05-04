@@ -32,7 +32,13 @@ variable "extra_roles_policy" {
 }
 
 variable "saml_provider_name" {
-  description = "SAML Provider name to trust the roles created"
+  description = "SAML Provider name to trust the roles created (pass either name or ARN)"
+  default     = ""
+}
+
+variable "saml_provider_arn" {
+  description = "SAML Provider ARN to trust the roles created (pass either a name or ARN)"
+  default     = ""
 }
 
 variable "enable_iam_password_policy" {
@@ -46,5 +52,5 @@ variable "create_default_roles" {
 }
 
 locals {
-  saml_provider_arn = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:saml-provider/${var.saml_provider_name}"
+  saml_provider_arn = var.saml_provider_name != "" ? "arn:aws:iam::${data.aws_caller_identity.current.account_id}:saml-provider/${var.saml_provider_name}" : var.saml_provider_arn
 }
