@@ -59,7 +59,8 @@ This modules creates the following resources:
 | extra\_roles\_policy\_arn | A map of { <role\_name> = <policy arn> } to attach policies to extra roles in this account (role must be declared at extra\_roles first) | `map` | `{}` | no |
 | org\_name | Name for this organization (slug) | `any` | n/a | yes |
 | role\_max\_session\_duration | Maximum CLI/API session duration | `string` | `"43200"` | no |
-| saml\_provider\_name | SAML Provider name to trust the roles created | `any` | n/a | yes |
+| saml\_provider\_arn | SAML Provider ARN to trust the roles created (pass either a name or ARN) | `string` | `""` | no |
+| saml\_provider\_name | SAML Provider name to trust the roles created (pass either name or ARN) | `string` | `""` | no |
 | set\_account\_alias | Whether to set or not IAM account alias | `bool` | `true` | no |
 
 ## Outputs
