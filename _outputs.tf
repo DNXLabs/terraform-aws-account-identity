@@ -19,22 +19,22 @@ output "iam_role_network_admin_arn" {
 }
 
 output "iam_role_power_user_arn" {
-  value       = aws_iam_role.power_user.arn
+  value       = try(aws_iam_role.power_user[0].arn, "")
   description = "PowerUserAccess IAM role ARN"
 }
 
 output "iam_role_security_audit_arn" {
-  value       = aws_iam_role.security_audit.arn
+  value       = try(aws_iam_role.security_audit[0].arn, "")
   description = "SecurityAudit IAM role ARN"
 }
 
 output "iam_role_support_user_arn" {
-  value       = aws_iam_role.support_user.arn
+  value       = try(aws_iam_role.support_user[0].arn, "")
   description = "SupportUser IAM role ARN"
 }
 
 output "iam_role_system_admin_arn" {
-  value       = aws_iam_role.system_admin.arn
+  value       = try(aws_iam_role.system_admin[0].arn, "")
   description = "SystemAdministrator IAM role ARN"
 }
 
