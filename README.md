@@ -57,6 +57,8 @@ This modules creates the following resources:
 | extra\_roles | A list of extra roles to create in this account | `list` | `[]` | no |
 | extra\_roles\_policy | A map of { <role\_name> = <json policy> } to create policies to extra roles in this account (role must be declared at extra\_roles first) | `map` | `{}` | no |
 | extra\_roles\_policy\_arn | A map of { <role\_name> = <policy arn> } to attach policies to extra roles in this account (role must be declared at extra\_roles first) | `map` | `{}` | no |
+| iam\_password\_policy\_max\_password\_age | n/a | `number` | `90` | no |
+| iam\_password\_policy\_password\_reuse\_prevention | n/a | `number` | `12` | no |
 | org\_name | Name for this organization (slug) | `any` | n/a | yes |
 | role\_max\_session\_duration | Maximum CLI/API session duration | `string` | `"43200"` | no |
 | saml\_provider\_arn | SAML Provider ARN to trust the roles created (pass either a name or ARN) | `string` | `""` | no |
