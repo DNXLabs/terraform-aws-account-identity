@@ -1,7 +1,7 @@
 resource "aws_iam_role" "extra" {
   count = length(var.extra_roles)
 
-  name                 = element(keys(var.extra_roles), count.index)
+  name                 = element(var.extra_roles, count.index)
   assume_role_policy   = data.aws_iam_policy_document.assume_role_saml.json
   max_session_duration = var.role_max_session_duration
 }
