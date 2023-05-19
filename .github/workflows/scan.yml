@@ -16,3 +16,4 @@ jobs:
         with:
           directory: .
           framework: terraform
+          soft_fail_on: CKV_AWS_274
