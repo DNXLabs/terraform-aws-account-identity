@@ -26,6 +26,8 @@ This modules creates the following resources:
       - Policy attached: "arn:aws:iam::aws:policy/job-function/SystemAdministrator"
     - View Only Access
       - Policy attached: "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess"
+    - Read Only Access
+      - Policy attached: "arn:aws:iam::aws:policy/ReadOnlyAccess"
 
   In addition you have the option to:
 
@@ -80,6 +82,7 @@ This modules creates the following resources:
 | iam\_role\_support\_user\_arn | SupportUser IAM role ARN |
 | iam\_role\_system\_admin\_arn | SystemAdministrator IAM role ARN |
 | iam\_role\_view\_only\_arn | ViewOnlyAccess IAM role ARN |
+| iam\_role\_read\_only\_arn | ReadOnlyAccess IAM role ARN |
 
 <!--- END_TF_DOCS --->
 
